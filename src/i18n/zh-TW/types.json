@@ -1,0 +1,65 @@
+{
+  "base": {
+    "base-entity": {
+      "id": "資料唯一識別碼",
+      "creator": "建立者識別碼",
+      "updater": "更新者識別碼",
+      "createTime": "資料建立時間",
+      "updateTime": "資料更新時間",
+      "schemaVersion": "資料結構版本",
+      "status": "資料狀態\n新建: 0\n啟用中: 10\n停用中: -10\n刪除: -20"
+    },
+    "base-query": {
+      "debug": "是否啟用除錯模式 (目前未支援)",
+      "examine": "是否僅檢查參數是否符合需求，或是驗證格式是否正確",
+      "attributes": "回傳的資料屬性 (參數可以是module, payload, errors, data)",
+      "callback": "若有設定，則不使用 keep alive，改用 post back的方式取得回應 (目前未支援)"
+    },
+    "base-search": {
+      "name": "欄位名稱",
+      "order": "排序方式",
+      "limit": "限制筆數 零表示無限制",
+      "offset": "略過筆數 零表示不跳過",
+      "count": "總筆數"
+    },
+    "service-response": {
+      "module-code": "模組代碼",
+      "module-name": "模組名稱",
+      "module-version": "模組版本",
+      "error-code": "錯誤代碼",
+      "error-type": "錯誤類型",
+      "error-name": "錯誤名稱",
+      "error-message": "錯誤訊息",
+      "error-extraInfo": "其他資訊",
+      "module": "模組資訊",
+      "payload": "Query or Body 資料",
+      "errors": "錯誤資訊"
+    }
+  },
+  "type": {
+    "id": "資料唯一識別碼",
+    "success": "是否成功",
+    "message": "回應訊息",
+    "accountInfo": {
+      "organization": "組織資訊",
+      "applications": "應用程式資訊"
+    },
+    "location": {
+      "source": "原始地址",
+      "formatted": "格式化地址",
+      "coordinate": "經緯度",
+      "lat": "緯度",
+      "lng": "經度"
+    },
+    "priceInfo": {
+      "TWD": "新台幣"
+    },
+    "planCycleCalculateLimit": {
+      "vehicleLimit": "單次車輛計算上限",
+      "destinationLimit": "單次計算目的地上限",
+      "monthlyDestinationLimit": "每月計算目的地上限",
+      "destinationPrice": "目的地價格",
+      "overDestinationPrice": "超支價格 (每個目的地)"
+    }
+  }
+}

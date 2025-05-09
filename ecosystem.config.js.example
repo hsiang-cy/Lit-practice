@@ -1,0 +1,15 @@
+module.exports = {
+  apps: [
+    {
+      name: '',
+      script: '',
+      instances: 1,
+      exec_mode: 'cluster',
+      watch: false,
+      log_date_format: '',
+      autorestart: true,
+      restart_delay: 30000,
+      listen_timeout: 3000
+    }
+  ]
+}

@@ -1,0 +1,433 @@
+{
+  "account": {
+    "4000": {
+      "apiDescription": "取得登錄者清單",
+      "id": "登錄者識別碼",
+      "account": "帳號",
+      "name": "姓名",
+      "password": "密碼",
+      "area": "隸屬地區\n全區: WHOLE\n北區: NORTH\n中區: CENTRAL\n南區:SOUTHERN",
+      "status": "資料狀態\n啟用中: 10\n停用中: -10",
+      "type": "類別",
+      "comment": "備註"
+    },
+    "4001": {
+      "apiDescription": "取得單一登錄者資訊",
+      "id": "登錄者識別碼",
+      "account": "帳號",
+      "password": "密碼",
+      "name": "姓名",
+      "area": "隸屬地區\n全區: WHOLE\n北區: NORTH\n中區: CENTRAL\n南區:SOUTHERN",
+      "status": "資料狀態\n啟用中: 10\n停用中: -10",
+      "type": "類別",
+      "comment": "備註"
+    },
+    "4002": {
+      "apiDescription": "新增登錄者",
+      "id": "登錄者識別碼",
+      "account": "帳號",
+      "password": "密碼",
+      "name": "姓名",
+      "area": "隸屬地區\n全區: WHOLE\n北區: NORTH\n中區: CENTRAL\n南區:SOUTHERN",
+      "type": "類別",
+      "comment": "備註"
+    },
+    "4003": {
+      "apiDescription": "編輯登錄者資訊",
+      "id": "登錄者識別碼",
+      "account": "帳號",
+      "password": "密碼",
+      "name": "姓名",
+      "area": "隸屬地區\n全區: WHOLE\n北區: NORTH\n中區: CENTRAL\n南區:SOUTHERN",
+      "status": "資料狀態\n啟用中: 10\n停用中: -10",
+      "type": "類別",
+      "comment": "備註"
+    },
+    "4004": {
+      "apiDescription": "刪除登錄者",
+      "id": "登錄者識別碼"
+    },
+    "4005": {
+      "apiDescription": "更新登錄者狀態",
+      "id": "登錄者識別碼",
+      "area": "隸屬地區\n全區: WHOLE\n北區: NORTH\n中區: CENTRAL\n南區:SOUTHERN",
+      "status": "資料狀態\n啟用中: 10\n停用中: -10"
+    },
+    "4006": {
+      "apiDescription": "變更密碼",
+      "id": "登錄者識別碼",
+      "password": "密碼"
+    }
+  },
+  "auth": {
+    "8000": {
+      "apiDescription": "登入",
+      "account": "帳號",
+      "password": "密碼",
+      "deviceId": "裝置識別碼",
+      "platform": "裝置平台(WEB | IOS | ANDROID | API)",
+      "userAgent": "user Agent",
+      "ip": "ip",
+      "accountId": "帳號識別碼",
+      "token": "token"
+    },
+    "8001": {
+      "apiDescription": "登出",
+      "accountId": "帳號識別碼",
+      "deviceId": "裝置識別碼",
+      "platform": "裝置平台(WEB | IOS | ANDROID | API)",
+      "userAgent": "user Agent",
+      "ip": "ip",
+      "token": "token"
+    }
+  },
+  "calculate-job": {
+    "6000": {
+      "apiDescription": "取得計算任務派遣總覽",
+      "calculateJobId": "計算任務識別碼",
+      "counts": "趟數",
+      "vehicleRoute": "車輛負責路線",
+      "fleetName": "車隊名稱",
+      "totalRoute": "總路線資訊",
+      "averageRoute": "平均路線資訊(趟次平均)",
+      "averageVehicle": "平均路線資訊(車輛平均)",
+      "routes": "路線資訊清單"
+    },
+    "6001": {
+      "apiDescription": "取得計算任務路線清單",
+      "calculateJobId": "計算任務識別碼",
+      "dispatchRouteId": "計算任務路線識別碼",
+      "counts": "趟數",
+      "tasks": "路線任務列表",
+      "type": "客戶類型\nHP: 醫院\nDS: 藥局\nGP: 診所\nDB: 研究單位\nNO: 其他"
+    },
+    "6002": {
+      "apiDescription": "查詢無法分派的目的地",
+      "reason": "無法分派原因",
+      "destinations": "無法分派的目的地列表"
+    },
+    "6003": {
+      "apiDescription": "取得計算任務路線導航資訊",
+      "calculateJobId": "計算任務識別碼",
+      "dispatchRouteId": "計算任務路線識別碼",
+      "counts": "趟數",
+      "routeNo": "路線編號",
+      "from": "起始點路線資訊",
+      "to": "結束點路線資訊",
+      "encodedRoute": "編碼路徑",
+      "routePathList": "路徑清單"
+    },
+    "6004": {
+      "apiDescription": "查詢計算任務列表",
+      "id": "計算任務識別碼",
+      "orderGroupId": "訂單群組識別碼",
+      "area": "隸屬地區\n全區: WHOLE\n北區: NORTH\n中區: CENTRAL\n南區:SOUTHERN",
+      "state": "計算任務狀態\n新建立: 0\n資料前處理: 10\n等待演算法計算: 50\n演算法開始計算: 100\n演算法計算完成: 150\n資料後處理: 200\n計算任務完成: 1000\n資料前處理失敗: -10\n呼叫演算法失敗: -50\n演算法計算失敗: -100\n演算法超時: -150\n資料後處理失敗: -200\n未知錯誤: -9999",
+      "planStartDateStart": "預計派遣日期開始 - 起",
+      "planStartDateEnd": "預計派遣日期開始 - 迄"
+    },
+    "6005": {
+      "apiDescription": "查詢計算任務狀態列表",
+      "id": "計算任務識別碼"
+    }
+  },
+  "customer": {
+    "5000": {
+      "apiDescription": "獲取客戶主檔清單",
+      "id": "客戶ID",
+      "locationCode": "配送地點代碼",
+      "customerName": "客戶名稱"
+    },
+    "5001": {
+      "apiDescription": "取得單筆客戶詳細資料",
+      "customerId": "客戶ID"
+    },
+    "5002": {
+      "apiDescription": "編輯使用客戶資料",
+      "customerId": "客戶ID"
+    },
+    "5003": {
+      "apiDescription": "變更客戶時窗",
+      "customerId": "客戶ID",
+      "timeWindow": "時窗",
+      "monday": "星期一時窗",
+      "tuesday": "星期二時窗",
+      "wednesday": "星期三時窗",
+      "thursday": "星期四時窗",
+      "friday": "星期五時窗",
+      "saturday": "星期六時窗",
+      "sunday": "星期日時窗",
+      "workDayTimeWindow": "[9:00 ~ 12:00, 14:30 ~ 17:30, 18:00 ~ 21:00]",
+      "holidayTimeWindow": "[0:00 ~ 0:00]"
+    },
+    "5004": {
+      "apiDescription": "變更特殊作業時間",
+      "id": "客戶ID",
+      "specialTW": "特殊作業時間"
+    }
+  },
+  "fleet": {
+    "1000": {
+      "apiDescription": "取得車隊管理清單",
+      "id": "車隊識別碼",
+      "area": "隸屬地區\n全區: WHOLE\n北區: NORTH\n中區: CENTRAL\n南區:SOUTHERN",
+      "code": "車隊代碼",
+      "name": "車隊名稱",
+      "startAddress": "倉庫地址",
+      "endAddress": "結束地址",
+      "status": "資料狀態\n啟用中: 10\n停用中: -10",
+      "priority": "派遣優先度",
+      "vehicleCounts": "車輛數量",
+      "comment": "備註"
+    },
+    "1001": {
+      "apiDescription": "取得單筆車隊資料",
+      "id": "車隊識別碼",
+      "memberId": "車隊成員識別碼",
+      "members": "車隊成員"
+    },
+    "1002": {
+      "apiDescription": "新增車隊",
+      "area": "隸屬地區\n全區: WHOLE\n北區: NORTH\n中區: CENTRAL\n南區:SOUTHERN",
+      "name": "車隊名稱",
+      "startAddress": "倉庫地址",
+      "endAddress": "結束地址",
+      "priority": "派遣優先度",
+      "comment": "備註"
+    },
+    "1003": {
+      "apiDescription": "更新車隊資訊",
+      "id": "車隊識別碼",
+      "area": "隸屬地區\n全區: WHOLE\n北區: NORTH\n中區: CENTRAL\n南區:SOUTHERN",
+      "code": "車隊代碼",
+      "name": "車隊名稱",
+      "startAddress": "倉庫地址",
+      "endAddress": "結束地址\n(若要移除結束地址, 請填寫字串'isEmpty', 若不改變, 請填寫字串'notChange')",
+      "status": "資料狀態\n啟用中: 10\n停用中: -10",
+      "priority": "派遣優先度"
+    },
+    "1004": {
+      "apiDescription": "刪除車隊資料",
+      "id": "車隊識別碼"
+    },
+    "1005": {
+      "apiDescription": "編輯車隊狀態",
+      "status": "資料狀態\n啟用中: 10\n停用中: -10",
+      "id": "車隊識別碼"
+    }
+  },
+  "order": {
+    "7000": {
+      "apiDescription": "匯入訂單資訊，從前端接收.xlsx",
+      "startTime": "訂單時間",
+      "area": "隸屬地區\n全區: WHOLE\n北區: NORTH\n中區: CENTRAL\n南區: SOUTHERN",
+      "comment": "備註",
+      "file": "訂單檔案",
+      "success": "是否成功",
+      "id": "訂單群組識別碼"
+    },
+    "7001": {
+      "apiDescription": "查詢訂單列表",
+      "id": "訂單識別碼",
+      "area": "隸屬地區\n全區: WHOLE\n北區: NORTH\n中區: CENTRAL\n南區:SOUTHERN",
+      "startTimeStart": "訂單配送日期-起",
+      "startTimeEnd": "訂單配送日期-迄"
+    },
+    "7002": {
+      "apiDescription": "查詢訂單目的地列表",
+      "orderGroupId": "訂單群組識別碼",
+      "depot": "倉別",
+      "route": "路線",
+      "findErrorOrder": "是否查找錯誤的訂單(code-geohash 不存在的訂單)"
+    },
+    "7010": {
+      "apiDescription": "開始計算訂單",
+      "orderId": "訂單識別碼",
+      "vehicleIds": "車輛識別碼清單",
+      "comment": "備註",
+      "success": "是否成功",
+      "id": "計算任務識別碼"
+    }
+  },
+  "route": {
+    "3000": {
+      "apiDescription": "路線管理清單",
+      "id": "路線識別碼",
+      "area": "隸屬地區\n全區: WHOLE\n北區: NORTH\n中區: CENTRAL\n南區:SOUTHERN",
+      "status": "資料狀態\n啟用中: 10\n停用中: -10",
+      "name": "路線名稱",
+      "comment": "備註",
+      "vehicleCounts": "車輛數量"
+    },
+    "3001": {
+      "apiDescription": "取得單一路線資訊",
+      "id": "路線識別碼",
+      "area": "隸屬地區\n全區: WHOLE\n北區: NORTH\n中區: CENTRAL\n南區:SOUTHERN",
+      "status": "資料狀態\n啟用中: 10\n停用中: -10",
+      "name": "路線名稱",
+      "vehicles": "車輛成員",
+      "vehicleId": "車輛成員識別碼",
+      "comment": "備註"
+    },
+    "3002": {
+      "apiDescription": "新增路線",
+      "id": "路線識別碼",
+      "area": "隸屬地區\n全區: WHOLE\n北區: NORTH\n中區: CENTRAL\n南區:SOUTHERN",
+      "status": "資料狀態\n啟用中: 10\n停用中: -10",
+      "name": "路線名稱",
+      "comment": "備註"
+    },
+    "3003": {
+      "apiDescription": "編輯路線資訊",
+      "id": "路線識別碼",
+      "area": "隸屬地區\n全區: WHOLE\n北區: NORTH\n中區: CENTRAL\n南區:SOUTHERN",
+      "status": "資料狀態\n啟用中: 10\n停用中: -10",
+      "name": "路線名稱",
+      "comment": "備註"
+    },
+    "3004": {
+      "apiDescription": "刪除路線",
+      "id": "路線識別碼",
+      "area": "隸屬地區\n全區: WHOLE\n北區: NORTH\n中區: CENTRAL\n南區:SOUTHERN",
+      "status": "資料狀態\n啟用中: 10\n停用中: -10",
+      "name": "路線名稱",
+      "comment": "備註"
+    },
+    "3005": {
+      "apiDescription": "編輯路線資料狀態",
+      "id": "路線識別碼",
+      "area": "隸屬地區\n全區: WHOLE\n北區: NORTH\n中區: CENTRAL\n南區:SOUTHERN",
+      "status": "資料狀態\n啟用中: 10\n停用中: -10",
+      "name": "路線名稱",
+      "comment": "備註"
+    },
+    "3008": {
+      "apiDescription": "上傳 Excel 匹量建立路線資料"
+    }
+  },
+  "vehicle": {
+    "2000": {
+      "apiDescription": "取得車輛管理清單",
+      "id": "車輛識別碼",
+      "area": "隸屬地區\n全區: WHOLE\n北區: NORTH\n中區: CENTRAL\n南區:SOUTHERN",
+      "code": "車牌, 車輛代碼 (Case-insensitive)",
+      "driverName": "司機姓名 (模糊查詢，Case-insensitive)",
+      "maxCapacity": "件數上限",
+      "startTime": "工作時間-起 (出發時間)(分)",
+      "endTime": "工作時間-迄",
+      "regularWorkTime": "正常工時上限 (分)",
+      "forceStart": "是否強制在出發時間出發",
+      "forceUse": "是否強制出勤",
+      "type": "車輛類型\n貨車: TRUCK\n打檔機車: MOTORCYCLE",
+      "status": "資料狀態\n啟用中: 10\n停用中: -10",
+      "fleets": "所屬車隊",
+      "tonnage": "噸數",
+      "size": "車輛尺寸",
+      "volume": "材積",
+      "fleetsId": "所屬車隊識別碼",
+      "fleetsName": "所屬車隊名稱",
+      "routes": "負責路線",
+      "routesId": "負責路線識別碼",
+      "routesName": "負責路線名稱"
+    },
+    "2001": {
+      "apiDescription": "取得單筆車輛資訊",
+      "id": "車輛識別碼",
+      "area": "隸屬地區\n全區: WHOLE\n北區: NORTH\n中區: CENTRAL\n南區:SOUTHERN",
+      "code": "車牌, 車輛代碼 (Case-insensitive)",
+      "driverName": "司機姓名 (模糊查詢，Case-insensitive)",
+      "maxCapacity": "件數上限",
+      "startTime": "工作時間-起 (出發時間)(分)",
+      "endTime": "工作時間-迄",
+      "regularWorkTime": "正常工時上限 (分)",
+      "forceStart": "是否強制在出發時間出發",
+      "forceUse": "是否強制出勤",
+      "type": "車輛類型\n貨車: TRUCK\n打檔機車: MOTORCYCLE",
+      "status": "資料狀態\n啟用中: 10\n停用中: -10",
+      "fleets": "所屬車隊",
+      "tonnage": "噸數",
+      "size": "車輛尺寸",
+      "volume": "材積",
+      "routes": "負責路線",
+      "fleetsId": "所屬車隊識別碼",
+      "fleetsName": "所屬車隊名稱",
+      "routesId": "負責路線識別碼",
+      "routesName": "負責路線名稱"
+    },
+    "2002": {
+      "apiDescription": "新增車輛",
+      "id": "車輛識別碼",
+      "area": "隸屬地區\n全區: WHOLE\n北區: NORTH\n中區: CENTRAL\n南區:SOUTHERN",
+      "code": "車牌, 車輛代碼 (Case-insensitive)",
+      "driverName": "司機姓名 (模糊查詢，Case-insensitive)",
+      "maxCapacity": "件數上限",
+      "startTime": "工作時間-起 (出發時間)(分)",
+      "endTime": "工作時間-迄",
+      "regularWorkTime": "正常工時上限 (分)",
+      "forceStart": "是否強制在出發時間出發",
+      "forceUse": "是否強制出勤",
+      "type": "車輛類型\n貨車: TRUCK\n打檔機車: MOTORCYCLE",
+      "status": "資料狀態\n啟用中: 10\n停用中: -10",
+      "fleets": "所屬車隊",
+      "tonnage": "噸數",
+      "size": "車輛尺寸",
+      "volume": "材積",
+      "routes": "負責路線",
+      "fleetsId": "所屬車隊識別碼",
+      "fleetsName": "所屬車隊名稱",
+      "routesId": "負責路線識別碼",
+      "routesName": "負責路線名稱"
+    },
+    "2003": {
+      "apiDescription": "更新車輛資訊",
+      "id": "車輛識別碼",
+      "area": "隸屬地區\n全區: WHOLE\n北區: NORTH\n中區: CENTRAL\n南區:SOUTHERN",
+      "code": "車牌, 車輛代碼 (Case-insensitive)",
+      "driverName": "司機姓名 (模糊查詢，Case-insensitive)",
+      "maxCapacity": "件數上限",
+      "startTime": "工作時間-起 (出發時間)(分)",
+      "endTime": "工作時間-迄",
+      "regularWorkTime": "正常工時上限 (分)",
+      "forceStart": "是否強制在出發時間出發",
+      "forceUse": "是否強制出勤",
+      "type": "車輛類型\n貨車: TRUCK\n打檔機車: MOTORCYCLE",
+      "status": "資料狀態\n啟用中: 10\n停用中: -10",
+      "fleets": "所屬車隊",
+      "tonnage": "噸數",
+      "size": "車輛尺寸",
+      "volume": "材積",
+      "routes": "負責路線",
+      "fleetsId": "所屬車隊識別碼",
+      "fleetsName": "所屬車隊名稱",
+      "routesId": "負責路線識別碼",
+      "routesName": "負責路線名稱"
+    },
+    "2004": {
+      "apiDescription": "刪除車輛",
+      "id": "車輛識別碼"
+    },
+    "2005": {
+      "apiDescription": "編輯車輛負責路線",
+      "id": "車輛識別碼",
+      "routeIds": "路線清單"
+    },
+    "2006": {
+      "apiDescription": "取得非該車輛的負責路線",
+      "id": "車輛識別碼",
+      "area": "隸屬地區\n全區: WHOLE\n北區: NORTH\n中區: CENTRAL\n南區:SOUTHERN",
+      "name": "路線名稱",
+      "comment": "備註",
+      "routeId": "路線識別碼"
+    },
+    "2007": {
+      "apiDescription": "編輯車輛狀態",
+      "id": "車輛識別碼",
+      "status": "資料狀態\n啟用中: 10\n停用中: -10"
+    },
+    "2008": {
+      "apiDescription": "用excel上傳車輛資訊, 以此批量建立",
+      "file": "車輛excel檔案",
+      "fleetId": "所屬車隊識 ID"
+    }
+  }
+}

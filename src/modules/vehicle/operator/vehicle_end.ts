@@ -1,0 +1,1 @@
+export const endTime: number = 1440

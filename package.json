@@ -1,0 +1,109 @@
+{
+  "name": "@zuellig-pharma-2/web-api",
+  "version": "0.1.19",
+  "description": "裕利2.0",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "publishConfig": {
+    "registry": "https://npm.saico.systems"
+  },
+  "keywords": [
+    "nestjs"
+  ],
+  "author": {
+    "name": "mike",
+    "email": "mike.huang@saico.com"
+  },
+  "engines": {
+    "node": ">=20.10.0"
+  },
+  "ts-standard": {
+    "env": [
+      "node"
+    ]
+  },
+  "files": [
+    "dist/",
+    "ecosystem.config.js.example",
+    "postInstall.js"
+  ],
+  "scripts": {
+    "postinstall": "node ./postInstall.js",
+    "build": "npm-run-all --serial clear nest:build",
+    "nest:build": "nest build --path tsconfig.json",
+    "clear": "rm -rf ./dist",
+    "start": "nest start",
+    "start:dev": "nest start --watch --path tsconfig.dev.json",
+    "start:debug": "nest start --debug --watch --path tsconfig.dev.json",
+    "versions": "./npm-helper.sh version",
+    "deploy": "./npm-helper.sh publish",
+    "image-dev": "NODE_ENV=development ./image-helper.sh",
+    "image-prod": "NODE_ENV=production ./image-helper.sh",
+    "cc": "./npm-helper.sh version && npm run build && ./npm-helper.sh publish"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.651.1",
+    "@fastify/multipart": "^9.0.3",
+    "@nestjs/axios": "^3.0.3",
+    "@nestjs/bullmq": "^10.2.1",
+    "@nestjs/common": "^10.4.3",
+    "@nestjs/core": "^10.4.3",
+    "@nestjs/jwt": "^11.0.0",
+    "@nestjs/platform-fastify": "^10.4.3",
+    "@nestjs/schedule": "^4.1.1",
+    "@nestjs/swagger": "^7.4.2",
+    "@nestjs/terminus": "^10.2.3",
+    "@nestjs/websockets": "^10.4.15",
+    "@opentelemetry/api": "^1.9.0",
+    "@opentelemetry/exporter-trace-otlp-grpc": "^0.53.0",
+    "@opentelemetry/instrumentation-http": "^0.53.0",
+    "@opentelemetry/resources": "^1.26.0",
+    "@opentelemetry/sdk-node": "^0.53.0",
+    "@prisma/instrumentation": "^5.19.1",
+    "@saico/nestjs-stoplight-elements": "^1.0.5",
+    "@saico/type-check-js": "^2.0.9",
+    "@supercharge/promise-pool": "^3.2.0",
+    "@zuellig-pharma-2/database": "^1.0.34",
+    "adm-zip": "^0.5.16",
+    "bcrypt": "^5.1.1",
+    "bullmq": "^5.13.1",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
+    "cron-validator": "^1.3.1",
+    "dayjs": "^1.11.13",
+    "dotenv": "^16.4.5",
+    "fastify-multer": "^2.0.3",
+    "fs-extra": "^11.2.0",
+    "i18next": "^23.15.1",
+    "i18next-fs-backend": "^2.3.2",
+    "ioredis": "^5.6.0",
+    "lodash": "^4.17.21",
+    "moment-timezone": "^0.5.45",
+    "nestjs-cls": "^4.4.1",
+    "ngeohash": "^0.6.3",
+    "node-xlsx": "^0.24.0",
+    "nodejs-snowflake": "^2.0.1",
+    "pino": "^9.4.0",
+    "pino-pretty": "^11.2.2",
+    "protobufjs": "^7.4.0",
+    "protobufjs-cli": "^1.1.3",
+    "ws": "^8.18.1"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^10.4.5",
+    "@nestjs/schematics": "^10.1.4",
+    "@saico/eslint-config-typescript-nestjs": "^1.0.5",
+    "@types/adm-zip": "^0.5.5",
+    "@types/bcrypt": "^5.0.2",
+    "@types/fs-extra": "^11.0.4",
+    "@types/lodash": "^4.17.7",
+    "@types/ngeohash": "^0.6.8",
+    "@types/node": "^20.16.5",
+    "@types/ws": "^8.18.0",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.5.4"
+  }
+}

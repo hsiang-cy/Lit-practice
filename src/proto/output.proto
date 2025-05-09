@@ -1,0 +1,75 @@
+syntax = "proto3";
+package air20.output;
+
+message AirOutput {
+  string job_id = 1; // 演算法任務 id
+  string status = 2; // 演算法計算結果狀態
+  string version = 3; // 演算法版本
+  map<string,string> indicators = 4; // 演算法指標
+  repeated IdleVehicle idle_vehicles = 5; // 未指派車輛資訊
+  repeated UnDispatch un_dispatches = 6; // 掉單資訊
+  repeated AirRoute routes = 7; // 車輛路徑資訊
+  Module module = 8; // 演算法Server模組資訊
+  repeated Error errors = 9; // 錯誤資訊
+}
+
+message IdleVehicle {
+  string id = 1; // 車輛 id
+  string reason = 2; // 未指派原因
+  string info = 3; // 其他輔助資訊
+}
+
+message UnDispatch {
+  string id = 1; // 需求點 id
+  string reason = 2; // 掉單原因
+  string info = 3; // 其他輔助資訊
+}
+
+message AirRoute {
+  string id = 1; // 車輛 id
+  int32 start_time = 2; // 實際開始時間 (分)
+  int32 end_time = 3; // 實際結束時間 (分)
+  int64 total_delivery_demand = 4; // 總送貨量
+  int64 total_pickup_demand = 5; // 總取貨量
+  int32 total_driving_time = 6; // 總行駛時間 (分)
+  int32 total_slack_time = 7; // 總緩衝時間 (分)
+  int32 total_service_time = 8; // 總服務時間 (分)
+  int32 total_work_time = 9; // 總工時 (分)
+  bool is_overtime = 10; // 實際是否有加班
+  int32 total_driving_distance = 11; // 總行駛距離
+  repeated AirTask tasks = 12; // 需求點清單
+}
+
+message AirTask {
+  int32 seq = 1; // 順序
+  string ref_id = 2; // 需求點 id / 車輛 id
+  string location = 3; // 地點 geohash
+  string event = 4; // 需求點種類
+  int32 type = 5; // 任務類型
+  int32 transit_distance = 6; // 從上個需求點到這個需求點行駛距離
+  int32 transit_time = 7; // 從上個需求點到這個需求點行駛時間 (分)
+  int32 arrival_time = 8; // 抵達時刻 (分)
+  int64 arrival_capacity = 9; // 抵達該需求點時，車上貨量
+  int32 service_time = 10; // 服務時間 (分)
+  int32 slack_time = 11; // 緩衝時間 (等待時間) (分)
+  repeated Demand demand = 12; // 載貨量資訊
+}
+
+message Demand {
+  string type = 1; // 載貨類型
+  int64 quantity = 2; // 載貨量
+  map<string,string> info = 3; // 其它資訊
+}
+
+message Module {
+  string code = 1; // 模組代碼
+  string name = 2; // 模組名稱
+  string version = 3; // 模組版本
+}
+
+message Error {
+  string code = 1; // 錯誤代碼
+  string type = 2; // 錯誤類型
+  string name = 3; // 錯誤名稱
+  string message = 4; // 錯誤訊息
+}

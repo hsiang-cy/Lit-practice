@@ -1,0 +1,13 @@
+{
+  "swagger": {
+    "error-api-response": {
+      "defaultDescription": "執行 API 過程中發生錯誤"
+    },
+    "success-api-response": {
+      "defaultDescription": "成功執行 API"
+    },
+    "success-search-api-response": {
+      "defaultDescription": "成功執行搜尋 API"
+    }
+  }
+}

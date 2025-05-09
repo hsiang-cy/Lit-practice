@@ -1,0 +1,10 @@
+services:
+  web-api:
+    image: docker-hub.saico.systems/zuellig-pharma/consultant2024/zp-web-api-develop-development:latest
+    container_name: web-api
+    hostname: web-api
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - 13505:13505

@@ -1,0 +1,101 @@
+syntax = "proto3";
+package air20.input;
+
+message AirInput {
+  string job_id = 1; // 演算法任務 id
+  AlgoConfig algo_config = 2; // 演算法參數
+  repeated Vehicle vehicles = 3; // 車輛資訊
+  repeated Destination destinations = 4; // 需求點資訊
+  map<string,Od> od = 5; // 路網資訊
+}
+
+message AlgoConfig {
+  string output_format = 1; // 輸出的格式
+  int32 max_slack = 2; // 整體最大緩衝時間 (分)
+  int32 time_limit = 3; // 最多求解時間 (秒)
+  string global_objective_mode = 4; // 全局目標式
+  string pickup_delivery_mode = 5; // 送收貨模式
+
+  // 底下是預留的參數
+  int32 first_solution_strategy = 6; // 初解策略
+  int32 improved_solution_strategy = 7; // 改善策略
+  repeated string specific_solution_keys = 8; // 客製化切換模式用
+}
+
+message Vehicle {
+  string id = 1; // 車輛 id
+  string type = 2; // 車輛種類 (跟路網呼應)
+
+  // 時窗
+  int32 start_time = 3; // 開始可用車時間 (分)
+  int32 end_time = 4; // 結束可用車時間 (分)
+
+  // 地點
+  repeated string start_location = 5; // 開始地點 (geohash)
+  repeated string end_location = 6; // 結束地點 (geohash)
+
+  bool force_use = 7; // 是否強制出車
+  int32 priority = 8; // 車輛使用優先等級
+  bool force_start = 9; // 強制在 start_time (開始可用車時間) 出發
+
+  // 容量限制
+  int64 min_capacity = 10; // 當趟至少載貨量
+  int64 max_capacity = 11; // 當趟至多載貨量
+
+  // 工時限制
+  int32 min_work_time = 12; // 工作工時下限 (分)
+  int32 regular_work_time = 13; // 正常工時上限 (分)
+  bool consider_overtime = 14; // 是否考慮加班
+  int32 max_work_overtime = 15; // 額外加班工時 (分)
+
+  // 行駛時間限制
+  int32 min_driving_time = 16; // 至少行駛時間 (分)
+  int32 max_driving_time = 17; // 最多行駛時間 (分)
+
+  // 行駛里程限制
+  int32 min_driving_distance = 18; // 至少行駛距離 (m)
+  int32 max_driving_distance = 19; // 最多行駛距離 (m)
+
+  // 點數個數限制
+  int32 min_destination_count = 20; // 至少訂單數
+  int32 max_destination_count = 21; // 至多訂單數
+
+  // 作業時間
+  int32 start_setup_time = 22; // 出發前作業時間 (理貨時間) (分)
+  int32 end_setup_time = 23; // 完工後作業時間 (下貨時間) (分)
+}
+
+message Destination {
+  string id = 1; // 需求點 id
+  int32 type = 2; // 需求點類型
+  string location = 3; // 地點 geohash (對應路網)
+  repeated Demand demand = 4; // 載貨量資訊
+  repeated string execute_vehicles = 5; // 指定的車輛配送清單 (車輛 id)
+
+  // 服務時間
+  string service_time_mode = 6; // 服務模式
+  int32 service_time = 7; // 預設服務時間 (分)
+  map<string,int32> service_time_depend_on_vehicle = 8; // 特殊車輛服務時間
+
+  string arrival_mode = 9; // 抵達模式
+  int32 priority = 10; // 訂單優先等級
+
+  string time_windows_mode = 11; // 時窗優先模式
+  repeated TimeWindow time_windows = 12; // 時窗清單
+}
+
+message Demand {
+  string type = 1; // 載貨類型
+  int64 quantity = 2; // 載貨量
+  map<string,string> info = 3; // 其它資訊
+}
+
+message TimeWindow {
+  int32 start = 1; // 最早時刻 (分)
+  int32 end = 2; // 最晚時刻 (分)
+}
+
+message Od {
+  repeated int32 truck = 1; // 貨車路網
+  repeated int32 motorcycle = 2; // 機車路網
+}

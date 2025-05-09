@@ -1,0 +1,248 @@
+{
+  "100": {
+    "001": {
+      "UnknownError": "未知錯誤",
+      "ParseAddressFailed": "地址解析失敗"
+    }
+  },
+  "200": {
+    "001": {
+      "EndTimeCalculate": "無法計算結束時間",
+      "UnknownError": "未知錯誤",
+      "EndTimeEarlierThanStartTime": "結束時間不能早於開始時間",
+      "UploadVehicleExcelEmpty": "上傳車輛 (excel) 工作表為空",
+      "UploadVehicleExceedLimit": "上傳車輛數量超過限制",
+      "UploadVehicleExcelMissingColumn": "上傳車輛 (excel) 檔案標題列缺少必要欄位",
+      "VehicleAreaEmpty": "隸屬地區 為空",
+      "VehicleAreaEnum": "隸屬地區 參數錯誤\n全區: WHOLE\n北區: NORTH\n中區: CENTRAL\n南區:SOUTHERN",
+      "VehicleCodeEmpty": "車牌號碼 為空",
+      "VehicleCodeLengthError": "車牌號碼 長度錯誤",
+      "VehicleCodeFormatError": "車牌號碼 格式錯誤",
+      "VehicleCodeDuplicate": "車牌號碼 在表格內重複",
+      "VehicleDriverNameEmpty": "駕駛 為空",
+      "VehicleDriverNameLengthError": "駕駛 長度錯誤",
+      "VehicleStartTimeEmpty": "工作時間-起 為空",
+      "VehicleStartTimeFormatError": "工作時間-起 格式錯誤",
+      "VehicleEndTimeEmpty": "工作時間-迄 為空",
+      "VehicleEndTimeFormatError": "工作時間-迄 格式錯誤",
+      "VehicleMaxCapacityEmpty": "承載量 為空",
+      "VehicleMaxCapacityInvalidInt64": "承載量 為非法 INT64 數字",
+      "VehicleMaxCapacityMin": "承載量 小於最小限制",
+      "VehicleTypeEmpty": "類型 為空",
+      "VehicleTypeInvalid": "類型 傳入非法字元",
+      "VehicleForceStartEmpty": "強制出發時間 為空",
+      "VehicleForceStartInvalid": "強制出發時間 傳入非法字元",
+      "VehicleForceUseEmpty": "強制出勤 為空",
+      "VehicleForceUseInvalid": "強制出勤 傳入非法字元",
+      "VehicleMaxDrivingDistanceIsNumber": "限制總行駛距離上限(公尺) 為非法數字",
+      "VehicleMaxDrivingDistanceMin": "限制總行駛距離上限(公尺) 小於最小限制",
+      "VehicleMaxDrivingDistanceMax": "限制總行駛距離上限(公尺) 大於最大限制",
+      "VehicleRegularWorkTimeIsNumber": "限制總工時上限(分鐘) 為非法數字",
+      "VehicleRegularWorkTimeMin": "限制總工時上限(分鐘) 小於最小限制",
+      "VehicleRegularWorkTimeMax": "限制總工時上限(分鐘) 大於最大限制",
+      "VehicleMaxDrivingTimeIsNumber": "限制總行駛時間上限(分鐘) 為非法數字",
+      "VehicleMaxDrivingTimeMin": "限制總行駛時間上限(分鐘) 小於最小限制",
+      "VehicleMaxDrivingTimeMax": "限制總行駛時間上限(分鐘) 大於最大限制",
+      "VehicleStatusEmpty": "啟用狀態 為空",
+      "VehicleStatusInvalid": "啟用狀態 傳入非法字元",
+      "error": "臨時錯誤"
+
+    }
+  },
+  "500": {
+    "001": {
+      "UnknownError": "未知錯誤",
+      "timeWindowError": "時窗錯誤",
+      "DataNotExist": "資料不存在"
+    }
+  },
+  "600": {
+    "001": {
+      "UnknownError": "未知錯誤",
+      "typeError": "型別錯誤",
+      "noInfo": "沒有資料",
+      "CalculateJobNotFinished": "計算任務未完成"
+    }
+  },
+  "700": {
+    "001": {
+      "UnknownError": "未知錯誤",
+      "StartTimeEarlierThanToday": "計算日期不可早於今日",
+      "ImportOrderError": "解析訂單發生錯誤",
+      "NotVehicleCanRunThisRoute": "沒有車輛能夠跑該路線",
+      "FormatError": "Excel 格式錯誤"
+    }
+  },
+  "800": {
+    "001": {
+      "AuthenticationFailed": "驗證失敗"
+    }
+  },
+  "001": {
+    "001": {
+      "APINotFound": "您指定的 API 服務不存在，請確認可使用的 API 服務",
+      "UnknownError": "未知錯誤"
+    },
+    "002": {
+      "APIVersionDeprecated": "您指定的 API 版本已棄用，請改用其他較新的 API 版本",
+      "APIVersionNotExist": "您指定的 API 版本不存在，請確認可使用的 API 版本",
+      "UnknownError": "未知錯誤"
+    }
+  },
+  "002": {
+    "001": {
+      "AuthenticationFailed": "驗證失敗",
+      "UnknownError": "未知錯誤"
+    }
+  },
+  "003": {
+    "001": {
+      "PermissionDenied": "權限不足",
+      "AccountLocked": "帳號已鎖定",
+      "AccountInactive": "帳號已停用",
+      "AccountNotExist": "帳號不存在",
+      "UnknownError": "未知錯誤"
+    }
+  },
+  "010": {
+    "001": {
+      "EmptyQuery": "錯誤的查詢參數",
+      "UnknownError": "未知錯誤"
+    }
+  },
+  "011": {
+    "001": {
+      "defaultMessage": "參數未傳入"
+    }
+  },
+  "012": {
+    "001": {
+      "defaultMessage": "參數必須是字串"
+    },
+    "002": {
+      "defaultMessage": "參數必須是數字"
+    },
+    "003": {
+      "defaultMessage": "參數必須是日期"
+    },
+    "004": {
+      "defaultMessage": "參數必須是布林值"
+    },
+    "005": {
+      "defaultMessage": "參數必須是陣列"
+    },
+    "006": {
+      "defaultMessage": "參數必須是列舉值"
+    },
+    "007": {
+      "defaultMessage": "參數必須是整數"
+    },
+    "010": {
+      "defaultMessage": "參數必須是布林字串"
+    },
+    "011": {
+      "defaultMessage": "參數必須是合法的日期字串"
+    },
+    "012": {
+      "defaultMessage": "參數必須是數字字串"
+    },
+    "016": {
+      "defaultMessage": "參數必須是合法緯度"
+    },
+    "017": {
+      "defaultMessage": "參數必須是合法經度"
+    },
+    "018": {
+      "defaultMessage": "參數必須包含指定字元"
+    },
+    "020": {
+      "defaultMessage": "參數必須符合正則表達式"
+    },
+    "021": {
+      "defaultMessage": "參數必須大於等於最小值"
+    },
+    "022": {
+      "defaultMessage": "參數必須小於等於最大值"
+    },
+    "023": {
+      "defaultMessage": "參數必須大於等於最小日期"
+    },
+    "024": {
+      "defaultMessage": "參數必須小於等於最大日期"
+    },
+    "025": {
+      "defaultMessage": "參數長度必須大於等於最小長度"
+    },
+    "026": {
+      "defaultMessage": "參數長度必須小於等於最大長度"
+    },
+    "027": {
+      "defaultMessage": "陣列不可為空"
+    },
+    "028": {
+      "defaultMessage": "陣列必須包含指定元素"
+    },
+    "029": {
+      "defaultMessage": "陣列不可包含指定元素"
+    },
+    "031": {
+      "defaultMessage": "陣列長度必須小於等於最大長度"
+    }
+  },
+  "013": {
+    "001": {
+      "FileEmpty": "檔案為空",
+      "UnknownError": "未知錯誤"
+    },
+    "002": {
+      "UnsupportedMediaType": "不支援的檔案類型",
+      "UnknownError": "未知錯誤"
+    },
+    "003": {
+      "PayloadTooLarge": "檔案大小超過限制",
+      "UnknownError": "未知錯誤"
+    },
+    "004": {
+      "NotAllowedField": "未允許的欄位",
+      "UnknownError": "未知錯誤"
+    },
+    "005": {
+      "FileCountLimitExceeded": "超過欄位檔案上限",
+      "UnknownError": "未知錯誤"
+    }
+  },
+  "020": {
+    "001": {
+      "defaultMessage": "資料不存在"
+    }
+  },
+  "021": {
+    "001": {
+      "defaultMessage": "資料重複"
+    }
+  },
+  "022": {
+    "001": {
+      "defaultMessage": "資料未修改"
+    }
+  },
+  "023": {
+    "001": {
+      "defaultMessage": "資料未修改"
+    }
+  },
+  "098": {
+    "001": {
+      "ExternalConnectionError": "外部服務無法連線",
+      "ExternalServiceError": "外部服務發生錯誤",
+      "UnknownError": "未知錯誤"
+    }
+  },
+  "099": {
+    "001": {
+      "InternalConnectionError": "內部服務無法連線",
+      "InternalServiceError": "內部服務發生錯誤",
+      "UnknownError": "未知錯誤"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "swagger-document": {
+    "create-api-error-description": {
+      "code": "錯誤代碼",
+      "description": "錯誤代碼描述",
+      "title": "API 錯誤代碼對應表",
+      "type": "錯誤類型"
+    }
+  }
+}
